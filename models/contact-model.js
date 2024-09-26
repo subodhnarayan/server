@@ -1,0 +1,14 @@
+const { Schema, model, default: mongoose } = require("mongoose");
+
+
+const conctactSchema = new Schema({
+    username: { type: String, required: true },
+    email: { type: String, required: true },
+    message: { type: String, required: true },
+});
+
+
+
+//create a model or a collection''
+const Contact = new model('Contact', conctactSchema);
+module.exports = Contact;
